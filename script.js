@@ -26,7 +26,7 @@ const pgList = [
         id: 2,
         name: "SKR Ladies Hostel Erode",
         location: "Thindal, Erode",
-        address: "Near BVB School, Thindal, Erode - 638012",
+        address: "BVB School Main Road, Ammu Mess Backside, Oldage Home Opposite Road, Thindal, Erode - 638012",
         city: "Erode",
         phone: "9159792345",
         gender: "Female",
@@ -288,7 +288,7 @@ function renderFeaturedPGs() {
     const grid = document.getElementById('featured-grid');
     if (!grid) return;
 
-    const featured = allPGData.filter(pg => pg.id === 1 || pg.id === 6);
+    const featured = allPGData.filter(pg => [1, 2, 3, 6].includes(pg.id));
     grid.innerHTML = featured.map(pg => createPGCard(pg)).join('');
 }
 
