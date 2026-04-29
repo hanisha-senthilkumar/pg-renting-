@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | PG Finder TN</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .auth-container {
+            max-width: 450px;
+            margin: 60px auto;
+        }
+    </style>
+</head>
+<body style="background-color: var(--bg);">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                PG Finder TN
+            </a>
+            
+            <button class="mobile-menu-btn">☰</button>
+            
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="listings.html">PG Listings</a>
+                <a href="add-pg.html">Add PG</a>
+                <a href="login.html" class="btn btn-primary" style="color: white; padding: 8px 16px;">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container auth-container">
+        <div class="form-container">
+            <div class="section-title" style="margin-bottom: 32px; text-align: center;">
+                <h2 style="font-size: 1.75rem;">Create an Account</h2>
+                <p>Join us to find or list your PG</p>
+            </div>
+
+            <form id="signup-form">
+                <div class="form-group">
+                    <label class="form-label" for="fullname">Full Name</label>
+                    <input type="text" id="fullname" class="form-control" required placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" required placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" id="password" class="form-control" required placeholder="Create a password">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="role">I want to...</label>
+                    <select id="role" class="form-control" required>
+                        <option value="user">Find a PG (User)</option>
+                        <option value="owner">List a PG (Owner)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" style="font-size: 1.125rem; margin-top: 24px;">
+                    Sign Up
+                </button>
+            </form>
+            
+            <p style="text-align: center; margin-top: 24px;">
+                Already have an account? <a href="login.html" style="color: var(--primary); text-decoration: none; font-weight: 600;">Login</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border: none;">
+                <p>&copy; 2026 PG Finder Tamil Nadu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.textContent;
+            btn.textContent = 'Creating Account...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Account created successfully! Redirecting to login...');
+                window.location.href = 'login.html';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

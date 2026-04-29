@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add PG Listing | PG Finder TN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: var(--bg);">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                PG Finder TN
+            </a>
+            
+            <button class="mobile-menu-btn">☰</button>
+            
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="listings.html">PG Listings</a>
+                <a href="add-pg.html" class="active">Add PG</a>
+                <a href="login.html" class="btn btn-primary" style="color: white; padding: 8px 16px;">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="form-container">
+            <div class="section-title" style="margin-bottom: 32px;">
+                <h2 style="font-size: 1.75rem;">List Your Property</h2>
+                <p>Fill out the details to get your PG listed on our platform.</p>
+            </div>
+
+            <form id="add-pg-form">
+                <div class="form-group">
+                    <label class="form-label" for="pgName">PG/Hostel Name *</label>
+                    <input type="text" id="pgName" class="form-control" required placeholder="e.g. Sri Sai Men's PG">
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="form-group">
+                        <label class="form-label" for="city">City *</label>
+                        <select id="city" class="form-control" required>
+                            <option value="">Select City</option>
+                            <option value="Erode">Erode</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="area">Area / Locality *</label>
+                        <input type="text" id="area" class="form-control" required placeholder="e.g. Thindal">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="address">Full Address *</label>
+                    <textarea id="address" class="form-control" required placeholder="Enter complete address with pincode"></textarea>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="form-group">
+                        <label class="form-label" for="pgType">PG Type *</label>
+                        <select id="pgType" class="form-control" required>
+                            <option value="">Select Type</option>
+                            <option value="Boys">Boys Only</option>
+                            <option value="Girls">Girls Only</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="rent">Starting Rent (₹) *</label>
+                        <input type="number" id="rent" class="form-control" required placeholder="e.g. 4500">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Key Amenities Provided</label>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px;">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="facility" value="food"> Food Included (3 Times)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="facility" value="wifi"> High Speed WiFi
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="facility" value="ac"> AC Rooms Available
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="facility" value="washing"> Washing Machine
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="facility" value="power"> Power Backup
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="facility" value="security"> CCTV Security
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="phone">Owner Contact Number *</label>
+                    <input type="tel" id="phone" class="form-control" required placeholder="+91" pattern="[0-9]{10}">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="photos">Upload Photos (Optional)</label>
+                    <input type="file" id="photos" class="form-control" multiple accept="image/*" style="padding: 9px 16px;">
+                    <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">Max 5 photos. Formats: JPG, PNG.</p>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" style="font-size: 1.125rem; margin-top: 32px;">
+                    Submit Property Listing
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border: none;">
+                <p>&copy; 2026 PG Finder Tamil Nadu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

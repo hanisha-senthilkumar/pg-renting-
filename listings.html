@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PG Listings - Erode | PG Finder TN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                PG Finder TN
+            </a>
+            
+            <button class="mobile-menu-btn">☰</button>
+            
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="listings.html" class="active">PG Listings</a>
+                <a href="add-pg.html">Add PG</a>
+                <a href="login.html" class="btn btn-primary" style="color: white; padding: 8px 16px;">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Listings Content -->
+    <div class="container">
+        <div class="listings-layout">
+            
+            <!-- Sidebar Filters -->
+            <aside class="filters-sidebar">
+                <h3 style="margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 12px;">Filters</h3>
+                
+                <div class="filter-group">
+                    <h4>City</h4>
+                    <div class="filter-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="city" value="Erode"> Erode
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Gender</h4>
+                    <div class="filter-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="gender" value="Male"> Male
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="gender" value="Female"> Female
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Amenities</h4>
+                    <div class="filter-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="amenities" value="food"> Food Included
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="amenities" value="ac"> AC Room
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="amenities" value="wifi"> WiFi Available
+                        </label>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- PG Grid -->
+            <main>
+                <div class="details-title-row" style="margin-bottom: 24px;">
+                    <h2>Properties in Erode</h2>
+                    <div style="display: flex; gap: 16px; align-items: center;">
+                        <input type="text" id="search-input" placeholder="Search by name or location..." style="padding: 8px; border: 1px solid var(--border); border-radius: 4px; min-width: 200px;">
+                        <select id="sort-select" style="padding: 8px; border: 1px solid var(--border); border-radius: 4px;">
+                            <option value="popularity">Sort by: Popularity</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Rating: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Injected via script.js -->
+                <div class="pg-grid" id="pg-grid"></div>
+            </main>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 16px;">
+                        PG Finder TN
+                    </a>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.875rem;">The most trusted platform to find verified PG accommodations in Erode region.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Top Locations</h4>
+                    <div class="footer-links">
+                        <a href="#">PG in Thindal</a>
+                        <a href="#">PG in Perundurai Rd</a>
+                        <a href="#">PG in Surampatti</a>
+                        <a href="#">PG in Erode Fort</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="listings.html">Browse PGs</a>
+                        <a href="add-pg.html">List Your Property</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PG Finder Tamil Nadu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

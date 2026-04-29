@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StayNest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                PG Finder TN
+            </a>
+            
+            <button class="mobile-menu-btn">☰</button>
+            
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="listings.html">PG Listings</a>
+                <a href="add-pg.html">Add PG</a>
+                <a href="login.html" class="btn btn-primary" style="color: white; padding: 8px 16px;">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container" style="width: 100%;">
+            <h1>Find Your Perfect PG in Erode</h1>
+            <p>Verified paying guest accommodations, hostels, and co-living spaces.</p>
+            
+            <div class="search-box">
+                <select id="home-location">
+                    <option value="">Select Location</option>
+                    <option value="erode">Erode</option>
+                </select>
+                <select id="home-gender">
+                    <option value="">Looking for</option>
+                    <option value="Male">Boys PG</option>
+                    <option value="Female">Girls PG</option>
+                </select>
+                <button class="btn btn-primary" id="home-search-btn">Search PGs</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Popular Areas Section -->
+    <section class="section container">
+        <div class="section-title">
+            <h2>Popular Areas</h2>
+            <p>Explore top-rated accommodations in the heart of Tamil Nadu</p>
+        </div>
+        
+        <div class="centered-area-container">
+            <div class="area-card featured-area" onclick="window.location.href='listings.html'">
+                <div class="area-img" style="background-image: url('https://www.erodesmartcity.org/wp-content/uploads/2021/06/erode-slider.png')"></div>
+                <div class="area-content">
+                    <h3>Erode</h3>
+                    <p class="pg-count"> 10+ PGs available</p>
+                    <button class="btn btn-primary" style="margin-top: 16px;">Browse All</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured PGs Section -->
+    <section class="section container" style="background-color: var(--bg);">
+        <div class="section-title">
+            <h2>Featured Accommodations</h2>
+            <p>Handpicked properties with premium amenities</p>
+        </div>
+        
+        <div class="pg-grid" id="featured-grid">
+            <!-- Injected via script.js -->
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="listings.html" class="btn btn-primary">View All Properties</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 16px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        PG Finder TN
+                    </a>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.875rem;">The most trusted platform to find verified PG accommodations in Erode region.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Top Locations</h4>
+                    <div class="footer-links">
+                        <a href="#">PG in Thindal</a>
+                        <a href="#">PG in Perundurai Rd</a>
+                        <a href="#">PG in Surampatti</a>
+                        <a href="#">PG in Erode Fort</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="listings.html">Browse PGs</a>
+                        <a href="add-pg.html">List Your Property</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <div class="footer-links">
+                        <a href="mailto:support@pgfindertn.com">support@pgfindertn.com</a>
+                        <a href="tel:+919876543210">+91 98765 43210</a>
+                        <p style="color: rgba(255,255,255,0.7); margin-top: 8px; font-size: 0.875rem;">123, Sengodampalayam, Erode, TN 638012</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 PG Finder Tamil Nadu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
